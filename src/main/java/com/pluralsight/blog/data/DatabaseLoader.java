@@ -14,8 +14,6 @@ import java.util.stream.IntStream;
 
 @Component
 public class DatabaseLoader implements ApplicationRunner {
-    @Autowired
-    private PostRepository postRepository;
 
     private final String[] templates = {
             "Smart Home %s", "Mobile %s - For When You're On he Go", "The %s - Your New Favorite Accessory"};
@@ -24,7 +22,11 @@ public class DatabaseLoader implements ApplicationRunner {
     public List<Post> randomPosts = new ArrayList<>();
     public List<Author> authors = new ArrayList<>();
 
-    public DatabaseLoader() {
+    private final PostRepository postRepository;
+
+    @Autowired
+    public DatabaseLoader(PostRepository postRepository) {
+        this.postRepository = postRepository;
     }
 
     @Override
