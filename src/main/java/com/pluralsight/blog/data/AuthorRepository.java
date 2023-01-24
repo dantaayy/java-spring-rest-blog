@@ -13,5 +13,5 @@ import java.util.List;
 @RestResource
 @RepositoryRestResource(exported = false)
 public interface AuthorRepository extends JpaRepository<Author, Long>{
-    
+
 }
