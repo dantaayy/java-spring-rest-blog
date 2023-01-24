@@ -39,7 +39,7 @@ public class DatabaseLoader implements ApplicationRunner {
                 new Author("tbell", "Tom", "Bell", "password"),
                 new Author("efisher", "Eric", "Fisher", "password"),
                 new Author("csouze", "Carlos", "Souza", "password")
-                ));
+        ));
 
         authorRepository.saveAll(authors);
 
