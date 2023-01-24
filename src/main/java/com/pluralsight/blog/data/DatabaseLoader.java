@@ -35,10 +35,10 @@ public class DatabaseLoader implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
         authors.addAll(Arrays.asList(
-                new Author("sholderess", "Sarah", "Holderness", "password"),
+                new Author("sholderness", "Sarah", "Holderness", "password"),
                 new Author("tbell", "Tom", "Bell", "password"),
                 new Author("efisher", "Eric", "Fisher", "password"),
-                new Author("csouze", "Carlos", "Souza", "password")
+                new Author("csouza", "Carlos", "Souza", "password")
         ));
 
         authorRepository.saveAll(authors);
